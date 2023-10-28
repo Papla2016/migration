@@ -33,7 +33,7 @@ const TariffPage = () => {
     return (
         <div className="flex flex-col h-screen px-4 gap-y-8 items-center bg-black text-white">
             <h1 className="text-3xl font-semibold">Тарифы</h1>
-            <div className="flex flex-row justify-between gap-x-4">
+            <div className="flex sm:flex-row flex-col justify-between gap-x-4">
                 {tariffs.map(tariff => <Tariff {...tariff}/>)}
             </div>
         </div>
