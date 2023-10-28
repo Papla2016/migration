@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Home from "@/routes/home/Home.tsx";
-import Map from "@/routes/map/Map.tsx";
-import Tarif from "@/routes/tarif/Tarif.tsx";
+import MapPage from "@/routes/map/MapPage";
+import Tariff from "@/routes/tariffs/TariffPage";
+import Header from './components/Header';
 
 const router = createBrowserRouter([
     {
@@ -13,16 +14,17 @@ const router = createBrowserRouter([
     },
     {
         path: "/map",
-        element: <Map/>
+        element: <MapPage/>
     },
     {
-        path: "/tarif",
-        element: <Tarif/>
+        path: "/tariffs",
+        element: <Tariff/>
     }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+    <Header/>
     <RouterProvider router={router}/>
   </React.StrictMode>,
 )
